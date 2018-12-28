@@ -1,4 +1,4 @@
-FROM node:7.10.0
+FROM node:10.15.0
 MAINTAINER Stephen Reyes <stephenkairos.reyes@gmail.com>
 # use changes to package.json to force Docker not to use the cache
 # when we change our application's nodejs dependencies:
