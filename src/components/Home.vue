@@ -51,9 +51,7 @@
   </div>
 </template>
 
-<script>
-import 'util'
-import 'util.promisify' 
+<script> 
 import EmailService from '@/services/EmailService'
 
 export default {
