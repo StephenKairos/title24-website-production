@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <!-- <h1>{{ title }}</h1> -->
+    <b-row>
+      <b-button @click="" variant="danger">Test Email</b-button>
+    </b-row>
     <b-row class="background-form">
       <b-col md="4" offset-md="7">
         <b-card class="front-form">
@@ -49,6 +52,10 @@
 </template>
 
 <script>
+import 'util'
+import 'util.promisify' 
+import EmailService from '@/services/EmailService'
+
 export default {
   name: 'home',
   data () {
@@ -63,6 +70,9 @@ export default {
       },
       show: true
     }
+  },
+  mounted() {
+    this.sendEmail();
   },
   methods: {
     onSubmit (evt) {
@@ -79,6 +89,9 @@ export default {
       /* Trick to reset/clear native browser form validation state */
       this.show = false;
       this.$nextTick(() => { this.show = true });
+    },
+    async sendEmail() {
+      await EmailService.sendEmail();
     }
   }
 }
