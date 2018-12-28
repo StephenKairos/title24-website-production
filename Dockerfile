@@ -13,6 +13,6 @@ RUN npm run build
 RUN rm -rf ./build
 RUN rm -rf ./test
 RUN rm -rf ./src
-ENV PORT=81
-EXPOSE 81
+ENV PORT=80
+EXPOSE 80
 CMD [ "npm", "start" ]
