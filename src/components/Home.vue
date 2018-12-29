@@ -85,14 +85,14 @@ export default {
       this.$nextTick(() => { this.show = true });
     },
     async sendEmail() {
-      alert("Thank you for your request! We will get back to you shortly.");
-
       await EmailService.sendEmail({
         text: this.form.text,
         name: this.form.name,
         number: this.form.number,
         email: this.form.email
       });
+
+      alert("Thank you for your request! We will get back to you shortly.");
 
       this.resetForm();
     }
