@@ -85,7 +85,7 @@ export default {
       this.$nextTick(() => { this.show = true });
     },
     async sendEmail() {
-      await EmailService.sendEmail({
+      EmailService.sendEmail({
         text: this.form.text,
         name: this.form.name,
         number: this.form.number,
