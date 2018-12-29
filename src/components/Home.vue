@@ -91,6 +91,8 @@ export default {
       await EmailService.sendEmail({
         name: this.form.name
       });
+
+      location.reload();
     }
   }
 }
