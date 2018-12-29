@@ -7,7 +7,7 @@
     <b-row class="background-form">
       <b-col md="4" offset-md="7">
         <b-card class="front-form">
-          <b-form @reset="onReset" v-if="show">
+          <b-form v-if="show">
             <h2>Let's Get Started!</h2>
             <p>Call us @ (510) 402-4513 or fill in the form below for some advice on your latest project.</p>
             <b-form-group id="infoInputGroup1"
@@ -16,7 +16,7 @@
                                v-model="form.text"
                                placeholder="How can we help?"
                                :rows="3"
-                               :max-rows="6">{{ form.text }}
+                               :max-rows="6">
               </b-form-textarea>          
             </b-form-group>
             <b-form-group>
@@ -26,7 +26,6 @@
                             required
                             placeholder="Your name...">
               </b-form-input>
-              <p>{{ form.name }}</p>
             </b-form-group>
             <b-form-group>
               <b-form-input id="nameInput"
@@ -34,7 +33,6 @@
                             v-model="form.number"
                             required
                             placeholder="Contact Number...">
-                            {{ form.number }}
               </b-form-input>
             </b-form-group>
             <b-form-group>
@@ -43,7 +41,6 @@
                               v-model="form.email"
                               required
                               placeholder="Email address...">
-                              {{ form.email }}
               </b-form-input>
             </b-form-group>
           </b-form>
@@ -78,7 +75,7 @@ export default {
     onSubmit (evt) {
       evt.preventDefault();
       // alert(JSON.stringify(this.form));
-      //alert("Thank you for your request! We will get back to you shortly.");
+      // alert("Thank you for your request! We will get back to you shortly.");
     },
     onReset (evt) {
       evt.preventDefault();
