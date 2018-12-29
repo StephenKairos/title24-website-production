@@ -13,34 +13,37 @@
             <b-form-group id="infoInputGroup1"
                           label-for="infoInput1">
               <b-form-textarea id="textarea1"
-                               v-model="this.form.text"
+                               v-model="form.text"
                                placeholder="How can we help?"
                                :rows="3"
-                               :max-rows="6">
+                               :max-rows="6">{{ form.text }}
               </b-form-textarea>          
             </b-form-group>
             <b-form-group>
               <b-form-input id="nameInput"
                             type="text"
-                            v-model="this.form.name"
+                            v-model="form.name"
                             required
                             placeholder="Your name...">
+                            {{ form.name }}
               </b-form-input>
             </b-form-group>
             <b-form-group>
               <b-form-input id="nameInput"
                             type="text"
-                            v-model="this.form.number"
+                            v-model="form.number"
                             required
                             placeholder="Contact Number...">
+                            {{ form.number }}
               </b-form-input>
             </b-form-group>
             <b-form-group>
               <b-form-input id="emailInput"
                               type="email"
-                              v-model="this.form.email"
+                              v-model="form.email"
                               required
                               placeholder="Email address...">
+                              {{ form.email }}
               </b-form-input>
             </b-form-group>
             <b-button type="submit" variant="danger">Click to Complete Enquiry</b-button>
