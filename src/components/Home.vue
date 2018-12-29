@@ -84,7 +84,7 @@ export default {
       /* Reset our form values */
       this.form.email = '';
       this.form.name = '';
-      this.form.number = null;
+      this.form.number = '';
       this.form.text = '';
       /* Trick to reset/clear native browser form validation state */
       this.show = false;
@@ -93,10 +93,10 @@ export default {
     async sendEmail() {
       await EmailService.sendEmail({
         form: {
-          name = this.form.name,
-          email = this.form.email,
-          number = this.form.number,
-          text = this.form.text
+          name: this.form.name,
+          email: this.form.email,
+          number: this.form.number,
+          text: this.form.text
         }
       });
     }
