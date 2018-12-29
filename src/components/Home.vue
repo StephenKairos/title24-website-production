@@ -13,7 +13,7 @@
             <b-form-group id="infoInputGroup1"
                           label-for="infoInput1">
               <b-form-textarea id="textarea1"
-                               v-model="form.text"
+                               v-model="this.form.text"
                                placeholder="How can we help?"
                                :rows="3"
                                :max-rows="6">
@@ -22,7 +22,7 @@
             <b-form-group>
               <b-form-input id="nameInput"
                             type="text"
-                            v-model="form.name"
+                            v-model="this.form.name"
                             required
                             placeholder="Your name...">
               </b-form-input>
@@ -30,7 +30,7 @@
             <b-form-group>
               <b-form-input id="nameInput"
                             type="text"
-                            v-model="form.number"
+                            v-model="this.form.number"
                             required
                             placeholder="Contact Number...">
               </b-form-input>
@@ -38,7 +38,7 @@
             <b-form-group>
               <b-form-input id="emailInput"
                               type="email"
-                              v-model="form.email"
+                              v-model="this.form.email"
                               required
                               placeholder="Email address...">
               </b-form-input>
