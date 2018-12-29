@@ -7,7 +7,7 @@
     <b-row class="background-form">
       <b-col md="4" offset-md="7">
         <b-card class="front-form">
-          <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+          <b-form @submit="sendEmail" @reset="onReset" v-if="show">
             <h2>Let's Get Started!</h2>
             <p>Call us @ (510) 402-4513 or fill in the form below for some advice on your latest project.</p>
             <b-form-group id="infoInputGroup1"
@@ -94,11 +94,11 @@ export default {
       this.$nextTick(() => { this.show = true });
     },
     async sendEmail() {
+      alert(this.form.name);
+
       await EmailService.sendEmail({
         name: this.form.name
       });
-
-      alert(this.form.name);
     }
   }
 }
