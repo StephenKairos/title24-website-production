@@ -25,8 +25,8 @@
                             v-model="form.name"
                             required
                             placeholder="Your name...">
-                            {{ form.name }}
               </b-form-input>
+              <p>{{ form.name }}</p>
             </b-form-group>
             <b-form-group>
               <b-form-input id="nameInput"
