@@ -77,7 +77,7 @@ export default {
       // alert(JSON.stringify(this.form));
       alert("Thank you for your request! We will get back to you shortly.");
 
-      sendEmail(this.form);
+      sendEmail();
     },
     onReset (evt) {
       evt.preventDefault();
@@ -90,8 +90,10 @@ export default {
       this.show = false;
       this.$nextTick(() => { this.show = true });
     },
-    async sendEmail(formSubmit) {
-      await EmailService.sendEmail(formSubmit);
+    async sendEmail() {
+      await EmailService.sendEmail({
+        form: this.form
+      });
     }
   }
 }
