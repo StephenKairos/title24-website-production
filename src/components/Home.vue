@@ -46,8 +46,8 @@
                               {{ form.email }}
               </b-form-input>
             </b-form-group>
-            <b-button @click="sendEmail" type="submit" variant="danger">Click to Complete Enquiry</b-button>
           </b-form>
+          <b-button @click="sendEmail" variant="danger">Click to Complete Enquiry</b-button>
         </b-card>
       </b-col>
     </b-row>
@@ -79,8 +79,6 @@ export default {
       evt.preventDefault();
       // alert(JSON.stringify(this.form));
       //alert("Thank you for your request! We will get back to you shortly.");
-
-      sendEmail();
     },
     onReset (evt) {
       evt.preventDefault();
