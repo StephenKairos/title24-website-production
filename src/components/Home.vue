@@ -75,7 +75,7 @@ export default {
     onSubmit (evt) {
       evt.preventDefault();
       // alert(JSON.stringify(this.form));
-      alert("Thank you for your request! We will get back to you shortly.");
+      //alert("Thank you for your request! We will get back to you shortly.");
 
       sendEmail();
     },
@@ -92,13 +92,10 @@ export default {
     },
     async sendEmail() {
       await EmailService.sendEmail({
-        form: {
-          name: this.form.name,
-          email: this.form.email,
-          number: this.form.number,
-          text: this.form.text
-        }
+        name: this.form.name
       });
+
+      alert(this.form.name);
     }
   }
 }
