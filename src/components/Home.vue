@@ -68,9 +68,6 @@ export default {
       show: true
     }
   },
-  mounted() {
-    this.sendEmail();
-  },
   methods: {
     onSubmit (evt) {
       evt.preventDefault();
