@@ -1,10 +1,10 @@
 import Api from '@/services/Api'
 
 export default {
-  sendEmail (params) {
-    return Api().post('test', params);
+  sendHomeEmail (params) {
+    return Api().post('home-email', params);
   },
-  getEmail () {
-    return Api().get('test');
+  getHomeEmail () {
+    return Api().get('home-email');
   }
 }

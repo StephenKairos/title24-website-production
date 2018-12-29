@@ -85,7 +85,7 @@ export default {
       this.$nextTick(() => { this.show = true });
     },
     sendEmail() {
-      EmailService.sendEmail({
+      EmailService.sendHomeEmail({
         text: this.form.text,
         name: this.form.name,
         number: this.form.number,
