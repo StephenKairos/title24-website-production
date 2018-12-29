@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <!-- <h1>{{ title }}</h1> -->
-    <b-row>
+    <!-- <b-row>
       <b-button @click="" variant="danger">Test Email</b-button>
-    </b-row>
+    </b-row> -->
     <b-row class="background-form">
       <b-col md="4" offset-md="7">
         <b-card class="front-form">
@@ -63,8 +63,7 @@ export default {
         text: '',
         number: '',
         email: '',
-        name: '',
-        checked: []
+        name: ''
       },
       show: true
     }
@@ -75,21 +74,24 @@ export default {
   methods: {
     onSubmit (evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
+      // alert(JSON.stringify(this.form));
+      alert("Thank you for your request! We will get back to you shortly.");
+
+      sendEmail(this.form);
     },
     onReset (evt) {
       evt.preventDefault();
       /* Reset our form values */
       this.form.email = '';
       this.form.name = '';
-      this.form.food = null;
-      this.form.checked = [];
+      this.form.number = null;
+      this.form.text = '';
       /* Trick to reset/clear native browser form validation state */
       this.show = false;
       this.$nextTick(() => { this.show = true });
     },
-    async sendEmail() {
-      await EmailService.sendEmail();
+    async sendEmail(formSubmit) {
+      await EmailService.sendEmail(formSubmit);
     }
   }
 }
