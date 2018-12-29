@@ -92,7 +92,12 @@ export default {
     },
     async sendEmail() {
       await EmailService.sendEmail({
-        form: this.form
+        form: {
+          name = this.form.name;
+          email = this.form.email;
+          number = this.form.number;
+          text = this.form.text;
+        }
       });
     }
   }
