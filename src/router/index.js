@@ -10,7 +10,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: '/title24-website',
+  base: '/',
   routes: [
     {
       path: '/',
