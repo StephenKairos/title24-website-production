@@ -66,8 +66,11 @@ export default {
         email: '',
         name: ''
       },
-      show: true
+      testget: 'pending...'
     }
+  },
+  mounted () {
+    this.test_get()
   },
   methods: {
     onSubmit (evt) {
@@ -97,6 +100,10 @@ export default {
       alert("Thank you for your request! We will get back to you shortly.");
 
       this.resetForm();
+    },
+    async test_get() {
+      const res = await EmailService.getHomeEmail();
+      this.testget = res.data;
     }
   }
 }

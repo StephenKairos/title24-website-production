@@ -5,6 +5,6 @@ export default {
     return Api().post('email', params);
   },
   getHomeEmail () {
-    return Api().get('email');
+    return Api().get('test');
   }
 }
