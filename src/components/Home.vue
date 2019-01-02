@@ -59,6 +59,7 @@ export default {
   data () {
     return {
       title: "Home",
+      show: true,
       form: {
         text: '',
         number: '',
@@ -89,7 +90,8 @@ export default {
         text: this.form.text,
         name: this.form.name,
         number: this.form.number,
-        email: this.form.email
+        email: this.form.email,
+        company: ""
       });
 
       alert("Thank you for your request! We will get back to you shortly.");

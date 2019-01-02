@@ -13,7 +13,7 @@
     <b-row class="background-form">
       <b-col md="6" offset-md="3">
         <b-card class="front-form">
-          <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+          <b-form @submit="sendEmail" v-if="show">
             <h2>Make an enquiry.</h2>
             <h4>We'll reply today - we promise!</h4>
             <b-form-group id="infoInputGroup1"
@@ -78,8 +78,7 @@ export default {
         number: '',
         email: '',
         name: '',
-        company: '',
-        checked: []
+        company: ''
       }
     }
   },
@@ -88,16 +87,30 @@ export default {
       evt.preventDefault();
       alert(JSON.stringify(this.form));
     },
-    onReset (evt) {
-      evt.preventDefault();
+    resetForm () {
+      // evt.preventDefault();
       /* Reset our form values */
       this.form.email = '';
       this.form.name = '';
-      this.form.food = null;
-      this.form.checked = [];
+      this.form.number = '';
+      this.form.text = '';
+      this.form.company = '';
       /* Trick to reset/clear native browser form validation state */
       this.show = false;
       this.$nextTick(() => { this.show = true });
+    },
+    sendEmail() {
+      EmailService.sendHomeEmail({
+        text: this.form.text,
+        name: this.form.name,
+        number: this.form.number,
+        email: this.form.email,
+        company: this.form.company
+      });
+
+      alert("Thank you for your request! We will get back to you shortly.");
+
+      this.resetForm();
     }
   }
 }
