@@ -80,7 +80,8 @@ export default {
         number: '',
         email: '',
         name: '',
-        company: ''
+        company: '',
+        time: ''
       }
     }
   },
@@ -102,12 +103,16 @@ export default {
       this.$nextTick(() => { this.show = true });
     },
     sendEmail() {
+      var time = new Date();
+      this.form.time = time.toString();
+
       EmailService.sendHomeEmail({
         text: this.form.text,
         name: this.form.name,
         number: this.form.number,
         email: this.form.email,
-        company: this.form.company
+        company: this.form.company,
+        time: this.form.time
       });
 
       alert("Thank you for your request! We will get back to you shortly.");

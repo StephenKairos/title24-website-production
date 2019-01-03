@@ -64,7 +64,8 @@ export default {
         text: '',
         number: '',
         email: '',
-        name: ''
+        name: '',
+        time: ''
       },
       testget: 'pending...'
     }
@@ -89,12 +90,16 @@ export default {
       this.$nextTick(() => { this.show = true });
     },
     sendEmail() {
+      var time = new Date();
+      this.form.time = time.toString();
+
       EmailService.sendHomeEmail({
         text: this.form.text,
         name: this.form.name,
         number: this.form.number,
         email: this.form.email,
-        company: ""
+        company: "N/A",
+        time: this.form.time
       });
 
       alert("Thank you for your request! We will get back to you shortly.");
