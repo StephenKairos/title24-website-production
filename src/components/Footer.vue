@@ -5,7 +5,7 @@
       <!-- <b-navbar-brand>{{ title }}</b-navbar-brand> -->
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-text center>© All rights reserved. Made with ❤️ by S. Reyes</b-nav-text>
+          <b-nav-text center>© All rights reserved. Made with by <a href="http://skreyes.me" target="_blank">S. Reyes</a></b-nav-text>
         </b-navbar-nav>
     </b-navbar>
   </div>

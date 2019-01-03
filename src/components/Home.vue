@@ -29,7 +29,7 @@
             </b-form-group>
             <b-form-group>
               <b-form-input id="nameInput"
-                            type="text"
+                            type="tel"
                             v-model="form.number"
                             required
                             placeholder="Contact Number...">
