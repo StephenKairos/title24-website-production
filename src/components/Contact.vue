@@ -67,6 +67,8 @@
 </template>
 
 <script>
+import EmailService from '@/services/EmailService'
+
 export default {
   name: 'contact',
   data () {
