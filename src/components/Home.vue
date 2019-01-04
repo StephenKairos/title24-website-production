@@ -53,10 +53,14 @@
 
     <!-- Services Section -->
     <b-row>
-      <h2>Energy calculation services from the experts</h2>
+      <b-col md="12">
+        <h2>Energy calculation services from the experts</h2>
+      </b-col>
     </b-row>
     <b-row>
-      <h3>We offer an accurate,  affordable and fast compliance process across all cities in California.</h3>
+      <b-col md="12">
+        <p>We offer an accurate,  affordable and fast compliance process across all cities in California.</p>
+      </b-col>
     </b-row>
     <b-row>
       <b-col md="4">
@@ -69,7 +73,7 @@
       </b-col>
       <b-col md="4">
         <h3>Guaranteed Service</h3>
-        <p>Experience our worry-free guarantee that your Title 24 calculations will be accepted by the building department.</p>
+        <p>Experience our worry-free guarantee that your Title 24 calculations will be accepted by the building department. </p>
       </b-col>
     </b-row>
 
