@@ -4,6 +4,8 @@
     <!-- <b-row>
       <b-button @click="" variant="danger">Test Email</b-button>
     </b-row> -->
+
+    <!-- Form Section -->
     <b-row class="background-form">
       <b-col md="4" offset-md="7">
         <b-card class="front-form">
@@ -48,6 +50,34 @@
         </b-card>
       </b-col>
     </b-row>
+
+    <!-- Services Section -->
+    <b-row>
+      <h2>Energy calculation services from the experts</h2>
+    </b-row>
+    <b-row>
+      <h3>We offer an accurate,  affordable and fast compliance process across all cities in California.</h3>
+    </b-row>
+    <b-row>
+      <b-col md="4">
+        <h3>Quick Turn Around</h3>
+        <p>We specialize in a fast and reliable service with a turnaround time of 1 to 2 business days from the moment you  give us your notice to proceed.</p>
+      </b-col>
+      <b-col md="4">
+        <h3>Flat Fee</h3>
+        <p>Enjoy our affordable flat fee of $300 on all of your residential projects from new construction, remodel and  addition  up to 2000 square feet.</p>
+      </b-col>
+      <b-col md="4">
+        <h3>Guaranteed Service</h3>
+        <p>Experience our worry-free guarantee that your Title 24 calculations will be accepted by the building department.</p>
+      </b-col>
+    </b-row>
+
+    <!-- Steps Section -->
+
+    <!-- Info Section -->
+
+    <!-- Video Section -->
   </div>
 </template>
 
