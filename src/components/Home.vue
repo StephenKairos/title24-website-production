@@ -139,7 +139,7 @@
     </div>
 
     <!-- Info Section -->
-    <div class="section">
+    <div class="section text-section">
       <b-row>
         <b-col md="12">
           <h2>Energy compliance report specialists at your service</h2>
@@ -242,6 +242,10 @@ export default {
 <style>
 .section {
   margin: 5%;
+}
+
+.text-section p {
+  text-align: left;
 }
 
 .subtitle-color {
