@@ -81,31 +81,59 @@
 
     <!-- Steps Section -->
     <div class="section">
-      <b-row>
+      <b-row class="subtitle-color">
         <b-col md="12">
           <h2>Get your Energy Report in 4 easy steps</h2>
         </b-col>
       </b-row>
-      <b-row>
-        <b-col md="3">
+      <b-row class="section-color">
+        <b-col class="column-padding" md="3">
           <h3>let us know</h3>
-          <img />
-          <p>The first step is to give us a call or send us an email and let us know how we can be of help. You may also fill up an enquiry  or order form. We will answer your questions & concerns and will provide you all the information you need to get you started right away.</p>
+          <img src="../assets/order-plans.jpg"/>
+          <div>
+            <b-btn v-b-toggle="'collapse1'" variant="primary">Find out more...</b-btn>
+            <b-collapse id="collapse1" class="mt-2">
+              <b-card>
+                <p class="card-text">The first step is to give us a call or send us an email and let us know how we can be of help. You may also fill up an enquiry  or order form. We will answer your questions & concerns and will provide you all the information you need to get you started right away.</p>
+              </b-card>
+            </b-collapse>
+          </div>
         </b-col>
-        <b-col md="3">
+        <b-col class="column-padding" md="3">
           <h3>email/upload plans</h3>
-          <img />
-          <p>You can send us your drawings and plans either by emailing us at service@californiatitle24.net or by <a to="contact">uploading them through our order form.</a></p>
+          <img src="../assets/order-plans.jpg"/>
+          <div>
+            <b-btn v-b-toggle="'collapse2'" variant="primary">Find out more...</b-btn>
+            <b-collapse id="collapse2" class="mt-2">
+              <b-card>
+                <p class="card-text">You can send us your drawings and plans either by emailing us at service@californiatitle24.net or by <a to="contact">uploading them through our order form.</a></p>
+              </b-card>
+            </b-collapse>
+          </div>
         </b-col>
-        <b-col md="3">
+        <b-col class="column-padding" md="3">
           <h3>receive Title 24 report</h3>
-          <img />
-          <p>Once we receive your plans and drawings, we will quickly prepare your report and you will be given an ETA which is typically within 24 hours. You will be notified by phone and email when your Title 24 calculations are ready. We will promptly let you know f we need more information along the process. Simply choose how you want to pay us and we will email you a signed & completed report, ready for submission .</p>
+          <img src="../assets/order-plans.jpg"/>
+          <div>
+            <b-btn v-b-toggle="'collapse3'" variant="primary">Find out more...</b-btn>
+            <b-collapse id="collapse3" class="mt-2">
+              <b-card>
+                <p class="card-text">Once we receive your plans and drawings, we will quickly prepare your report and you will be given an ETA which is typically within 24 hours. You will be notified by phone and email when your Title 24 calculations are ready. We will promptly let you know f we need more information along the process. Simply choose how you want to pay us and we will email you a signed & completed report, ready for submission .</p>
+              </b-card>
+            </b-collapse>
+          </div>
         </b-col>
-        <b-col md="3">
+        <b-col class="column-padding" md="3">
           <h3>print 2 copies</h3>
-          <img />
-          <p>After you have paid and received your calculations in electronic files via e-mail in pdf format with signatures, you will need to print out two (2) copies. These printed Title 24 reports and calculations  are what you will need to submit to the building department. Upon request, we can also mail you a hard copy of your Title 24 report via first-class mail.</p>
+          <img src="../assets/order-plans.jpg"/>
+          <div>
+            <b-btn v-b-toggle="'collapse4'" variant="primary">Find out more...</b-btn>
+            <b-collapse id="collapse4" class="mt-2">
+              <b-card>
+                <p class="card-text">After you have paid and received your calculations in electronic files via e-mail in pdf format with signatures, you will need to print out two (2) copies. These printed Title 24 reports and calculations  are what you will need to submit to the building department. Upon request, we can also mail you a hard copy of your Title 24 report via first-class mail.</p>
+              </b-card>
+            </b-collapse>
+          </div>
         </b-col>
       </b-row>
     </div>
@@ -214,6 +242,19 @@ export default {
 .section {
   margin: 5%;
 }
+
+.subtitle-color {
+  background-color: #E5E5E5;
+}
+
+.section-color {
+  background-color: #EDEDED;
+}
+
+.column-padding {
+  padding: 1%;
+}
+
 .background-form {
   background: url("../assets/background-1.jpg");
 }
